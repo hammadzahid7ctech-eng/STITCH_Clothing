@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STITCH | Premium Tailoring & Custom Clothing</title>
+    <meta name="description" content="Discover premium custom tailoring, suits, traditional wear, wedding outfits and personalized clothing designed around your perfect fit.">
+    <meta name="keywords" content="tailoring, custom suits, bespoke tailor, shalwar kameez, wedding formalwear, garment alterations, fabric selection, perfect fit">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theperfectstitch.com/">
+    <meta property="og:title" content="STITCH | Premium Tailoring & Custom Clothing">
+    <meta property="og:description" content="Premium custom tailoring crafted around your fit, style and occasion. Tailored with precision, designed for you.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1200&q=80">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* -----------------------------------------------------------------
+           1. CORE VARIABLES & RESET
+        ----------------------------------------------------------------- */
+        :root {
+            --color-charcoal: #1A1A1A;
+            --color-matte-black: #0D0D0D;
+            --color-ivory: #FAF9F6;
+            --color-warm-cream: #F4F1EA;
+            --color-beige: #E6E0D4;
+            --color-dark-brown: #2C1D11;
+            --color-muted-gold: #C5A059;
+            --color-gold-hover: #D4AF37;
+            --color-burgundy: #4A121A;
+            --color-border: rgba(197, 160, 89, 0.25);
+            --color-text-muted: #7A7A7A;
+            
+            --font-heading: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            --transition-fast: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-subtle: 0 10px 30px rgba(0,0,0,0.05);
+            --shadow-elevated: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-ivory);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition-fast);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 6rem 0;
+        }
+
+        /* -----------------------------------------------------------------
+           2. TYPOGRAPHY & BUTTONS
+        ----------------------------------------------------------------- */
+        h1, h2, h3, h4, .font-serif {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-muted-gold);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            color: var(--color-matte-black);
+            margin-bottom: 1.25rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            border: 1px solid transparent;
+            cursor: pointer;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-muted-gold);
+            color: #FFFFFF;
+            border-color: var(--color-muted-gold);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-gold-hover);
+            border-color: var(--color-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: var(--color-charcoal);
+            color: var(--color-charcoal);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-charcoal);
+            color: #FFFFFF;
+        }
+
+        .btn-outline-gold {
+            border-color: var(--color-muted-gold);
+            color: var(--color-muted-gold);
+        }
+
+        .btn-outline-gold:hover {
+            background-color: var(--color-muted-gold);
+            color: #FFFFFF;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #FFFFFF;
+            border-color: #25D366;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1EBE5D;
+            border-color: #1EBE5D;
+            transform: translateY(-2px);
+        }
+
+        /* -----------------------------------------------------------------
+           3. NAVBAR
+        ----------------------------------------------------------------- */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(250, 249, 246, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            transition: all var(--transition-fast);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .logo-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            color: var(--color-matte-black);
+            line-height: 1;
+        }
+
+        .logo-tagline {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-muted-gold);
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.1rem;
+        }
+
+        .nav-link {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 500;
+            color: var(--color-charcoal);
+            position: relative;
+            padding: 0.35rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-muted-gold);
+            transition: width var(--transition-fast);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-btn {
+            padding: 0.5rem;
+            color: var(--color-charcoal);
+            font-size: 1.1rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: var(--color-matte-black);
+            transition: all var(--transition-fast);
+        }
+
+        /* Mobile Nav Drawer */
+        .mobile-drawer {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background-color: var(--color-ivory);
+            z-index: 1001;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-elevated);
+            transition: right var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .mobile-drawer.active {
+            right: 0;
+        }
+
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .close-drawer {
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--color-charcoal);
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .mobile-nav-link {
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--color-charcoal);
+            font-weight: 500;
+        }
+
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-fast);
+        }
+
+        .drawer-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Search Overlay */
+        .search-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(13, 13, 13, 0.95);
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-fast);
+        }
+
+        .search-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .search-box {
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.2rem;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid var(--color-muted-gold);
+            color: #FFFFFF;
+        }
+
+        .close-search {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            color: #FFFFFF;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* -----------------------------------------------------------------
+           4. HERO SECTION
+        ----------------------------------------------------------------- */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 5rem;
+            background-color: var(--color-warm-cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 580px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            color: var(--color-matte-black);
+            margin-bottom: 1.5rem;
+            line-height: 1.08;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 600px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background-color: var(--color-matte-black);
+            color: var(--color-ivory);
+            padding: 1.5rem 2rem;
+            border-left: 3px solid var(--color-muted-gold);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .hero-badge-item {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-badge-item::before {
+            content: '♦';
+            color: var(--color-muted-gold);
+            font-size: 0.7rem;
+        }
+
+        /* -----------------------------------------------------------------
+           5. FEATURE STRIP
+        ----------------------------------------------------------------- */
+        .feature-strip {
+            background-color: var(--color-matte-black);
+            color: var(--color-ivory);
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 0 1rem;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .feature-item:last-child {
+            border-right: none;
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--color-muted-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+
+        /* -----------------------------------------------------------------
+           6. ABOUT SECTION
+        ----------------------------------------------------------------- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 520px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .about-text {
+            font-size: 1rem;
+            color: #4A4A4A;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-list {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .about-list-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-charcoal);
+        }
+
+        .about-list-item span {
+            color: var(--color-muted-gold);;
+        }
+
+        /* -----------------------------------------------------------------
+           7. SERVICES & FILTERING
+        ----------------------------------------------------------------- */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.4rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            border: 1px solid var(--color-border);
+            color: var(--color-charcoal);
+            background: transparent;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--color-matte-black);
+            color: var(--color-ivory);
+            border-color: var(--color-matte-black);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: #FFFFFF;
+            border: 1px solid rgba(0,0,0,0.06);
+            overflow: hidden;
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .service-img-wrapper {
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 1.75rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-matte-black);
+        }
+
+        .service-desc {
+            font-size: 0.88rem;
+            color: #666;
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .service-link {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-muted-gold);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* -----------------------------------------------------------------
+           8. EDITORIAL SECTIONS (Men, Women, Traditional, Wedding)
+        ----------------------------------------------------------------- */
+        .editorial-section {
+            position: relative;
+        }
+
+        .bg-cream {
+            background-color: var(--color-warm-cream);
+        }
+
+        .bg-dark {
+            background-color: var(--color-matte-black);
+            color: var(--color-ivory);
+        }
+
+        .bg-dark .section-title {
+            color: var(--color-ivory);
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .editorial-grid.reverse {
+            direction: rtl;
+        }
+
+        .editorial-grid.reverse > * {
+            direction: ltr;
+        }
+
+        .editorial-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .editorial-img {
+            width: 100%;
+            height: 380px;
+            border-radius: 2px;
+        }
+
+        .editorial-img.offset {
+            margin-top: 2rem;
+        }
+
+        .editorial-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .editorial-content p {
+            color: inherit;
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* -----------------------------------------------------------------
+           9. PROCESS & MEASUREMENTS
+        ----------------------------------------------------------------- */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            background-color: #FFFFFF;
+            padding: 1.5rem 1rem;
+            border-top: 2px solid var(--color-muted-gold);
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .process-number {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-muted-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .measurement-guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .measurement-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .measurement-card {
+            border-left: 2px solid var(--color-muted-gold);
+            padding-left: 1rem;
+        }
+
+        .measurement-card h4 {
+            font-size: 1.1rem;
+            color: var(--color-matte-black);
+        }
+
+        .measurement-card p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* -----------------------------------------------------------------
+           10. FABRICS & STYLE GUIDE TABS
+        ----------------------------------------------------------------- */
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 2.5rem;
+        }
+
+        .tab-btn {
+            padding: 1rem 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-text-muted);
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .tab-btn.active {
+            color: var(--color-matte-black);
+            border-bottom-color: var(--color-muted-gold);
+            font-weight: 600;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        /* -----------------------------------------------------------------
+           11. INTERACTIVE ESTIMATOR & FORM
+        ----------------------------------------------------------------- */
+        .estimator-card {
+            background-color: #FFFFFF;
+            padding: 2.5rem;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-subtle);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            color: var(--color-charcoal);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #DDD;
+            background-color: var(--color-ivory);
+            font-size: 0.9rem;
+            transition: border-color var(--transition-fast);
+        }
+
+        .form-control:focus {
+            border-color: var(--color-muted-gold);
+            background-color: #FFFFFF;
+        }
+
+        .estimate-total-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--color-warm-cream);
+            border-left: 3px solid var(--color-muted-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .estimate-amount {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--color-matte-black);
+            font-weight: 700;
+        }
+
+        .estimate-disclaimer {
+            font-size: 0.75rem;
+            color: #777;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* -----------------------------------------------------------------
+           12. BEFORE / AFTER SLIDER
+        ----------------------------------------------------------------- */
+        .ba-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .ba-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            user-select: none;
+        }
+
+        .ba-img-after {
+            width: 50%;
+            overflow: hidden;
+            z-index: 2;
+            border-right: 2px solid var(--color-muted-gold);
+        }
+
+        .ba-img-after img {
+            width: 900px; /* Matching max-width of container */
+            max-width: none;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .ba-slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background-color: var(--color-muted-gold);
+            z-index: 3;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+        }
+
+        .ba-handle-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-matte-black);
+            color: var(--color-muted-gold);
+            border: 2px solid var(--color-muted-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .ba-label {
+            position: absolute;
+            top: 20px;
+            padding: 0.4rem 0.8rem;
+            background-color: rgba(13,13,13,0.7);
+            color: #FFF;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            z-index: 4;
+        }
+
+        .ba-label-before { right: 20px; }
+        .ba-label-after { left: 20px; }
+
+        /* -----------------------------------------------------------------
+           13. GALLERY & LIGHTBOX
+        ----------------------------------------------------------------- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 13, 13, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+            color: #FFFFFF;
+            font-size: 1.5rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(13, 13, 13, 0.95);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-fast);
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-img {
+            max-width: 85vw;
+            max-height: 85vh;
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .lightbox-close, .lightbox-prev, .lightbox-next {
+            position: absolute;
+            color: #FFFFFF;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 1rem;
+            user-select: none;
+        }
+
+        .lightbox-close { top: 20px; right: 20px; }
+        .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+        .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+        /* -----------------------------------------------------------------
+           14. FAQ ACCORDION
+        ----------------------------------------------------------------- */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            color: var(--color-matte-black);
+            cursor: pointer;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--color-muted-gold);
+            transition: transform var(--transition-fast);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-smooth);
+            font-size: 0.92rem;
+            color: #555;
+            padding-bottom: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 1.5rem;
+        }
+
+        /* -----------------------------------------------------------------
+           15. SERVICE MODAL
+        ----------------------------------------------------------------- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0,0,0,0.7);
+            z-index: 1500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-fast);
+            padding: 1.5rem;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-card {
+            background-color: #FFFFFF;
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 10;
+            color: var(--color-matte-black);
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-details {
+            margin-bottom: 1.5rem;
+            border-top: 1px solid #EEE;
+            padding-top: 1rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* -----------------------------------------------------------------
+           16. FOOTER & BACK TO TOP
+        ----------------------------------------------------------------- */
+        .footer {
+            background-color: var(--color-matte-black);
+            color: var(--color-ivory);
+            padding: 5rem 0 2rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .footer-desc {
+            font-size: 0.88rem;
+            color: #999;
+            margin-bottom: 1.5rem;
+            max-width: 320px;
+        }
+
+        .footer-heading {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-muted-gold);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-link {
+            font-size: 0.85rem;
+            color: #BBB;
+        }
+
+        .footer-link:hover {
+            color: var(--color-muted-gold);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--color-muted-gold);
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-elevated);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-fast);
+            z-index: 900;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* -----------------------------------------------------------------
+           17. RESPONSIVE BREAKPOINTS
+        ----------------------------------------------------------------- */
+        @media (max-width: 1024px) {
+            .hero-grid, .about-grid, .editorial-grid, .measurement-guide-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .feature-grid { grid-template-columns: repeat(2, 1fr); }
+            .feature-item { border-right: none; margin-bottom: 1rem; }
+            .process-steps { grid-template-columns: repeat(3, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-actions .btn { display: none; }
+            .hamburger { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .tab-content.active { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full { grid-column: span 1; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .ba-container { height: 350px; }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; }
+            .editorial-images { grid-template-columns: 1fr; }
+            .editorial-img.offset { margin-top: 0; }
+            .hero-title { font-size: 2.2rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-title">STITCH</span>
+                <span class="logo-tagline">Tailored With Precision</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#men" class="nav-link">Men</a>
+                <a href="#women" class="nav-link">Women</a>
+                <a href="#wedding" class="nav-link">Wedding</a>
+                <a href="#fabric" class="nav-link">Fabrics</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="search-btn" id="searchOpenBtn" aria-label="Search">🔍</button>
+                <a href="#appointment" class="btn btn-outline-gold" style="padding: 0.6rem 1.2rem; font-size: 0.75rem;">Appointment</a>
+                <a href="https://wa.me/923093269261" target="_blank" class="btn btn-whatsapp" style="padding: 0.6rem 1rem; font-size: 0.75rem;">WhatsApp</a>
+                <div class="hamburger" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div>
+            <div class="drawer-header">
+                <div class="logo">
+                    <span class="logo-title" style="font-size: 1.2rem;">STITCH</span>
+                </div>
+                <div class="close-drawer" id="closeDrawerBtn">&times;</div>
+            </div>
+            <nav class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-link">Home</a>
+                <a href="#about" class="mobile-nav-link">About Us</a>
+                <a href="#services" class="mobile-nav-link">Services</a>
+                <a href="#men" class="mobile-nav-link">Men's Tailoring</a>
+                <a href="#women" class="mobile-nav-link">Women's Tailoring</a>
+                <a href="#traditional" class="mobile-nav-link">Traditional</a>
+                <a href="#wedding" class="mobile-nav-link">Wedding Wear</a>
+                <a href="#alterations" class="mobile-nav-link">Alterations</a>
+                <a href="#fabric" class="mobile-nav-link">Fabric Collection</a>
+                <a href="#gallery" class="mobile-nav-link">Gallery</a>
+                <a href="#faq" class="mobile-nav-link">FAQ</a>
+                <a href="#contact" class="mobile-nav-link">Contact</a>
+            </nav>
+        </div>
+        <div style="margin-top: 2rem;">
+            <a href="https://wa.me/923093269261" class="btn btn-whatsapp" style="width:100%; margin-bottom: 0.5rem;">WhatsApp: 03093269261</a>
+            <a href="tel:03093269261" class="btn btn-outline" style="width:100%;">Call: 03093269261</a>
+        </div>
+    </div>
+
+    <div class="search-modal" id="searchModal">
+        <div class="search-box">
+            <span class="close-search" id="closeSearchBtn">&times;</span>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search services, fabrics, tailoring style...">
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="section-subtitle">Bespoke & Custom Apparel</span>
+                <h1 class="hero-title">Tailored With Precision. Designed For You.</h1>
+                <p class="hero-description">Premium custom tailoring crafted around your fit, style and occasion. Experience bespoke apparel created to your exact measurements.</p>
+                <div class="hero-actions">
+                    <a href="#appointment" class="btn btn-primary">Book an Appointment</a>
+                    <a href="https://wa.me/923093269261" target="_blank" class="btn btn-whatsapp">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=80" alt="Master tailor taking precise measurements for a custom tailored garment" class="hero-image">
+                <div class="hero-badge">
+                    <div class="hero-badge-item">Custom Tailoring</div>
+                    <div class="hero-badge-item">Personal Fittings</div>
+                    <div class="hero-badge-item">Premium Fabrics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-strip">
+        <div class="container feature-grid">
+            <div class="feature-item">
+                <div class="feature-icon">✂</div>
+                <div class="feature-title">Perfect Fit</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">✏</div>
+                <div class="feature-title">Personalized Design</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🧵</div>
+                <div class="feature-title">Premium Fabrics</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🪡</div>
+                <div class="feature-title">Careful Craftsmanship</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div>
+                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80" alt="Professional tailor crafting bespoke clothing in an elegant workshop studio" class="about-image" loading="lazy">
+            </div>
+            <div>
+                <span class="section-subtitle">Our Artistry</span>
+                <h2 class="section-title">Where Craftsmanship Meets Personal Style.</h2>
+                <p class="about-text">At STITCH, custom tailoring is treated as a delicate art. We believe every garment should reflect the wearer's unique personality and body profile. From initial measurement taking to hand-finished buttonholes, precision is maintained at every step.</p>
+                <p class="about-text">We select fine textiles, employ structural inner linings, and craft flawless drape profiles so that every suit, kameez, or dress fits impeccably with complete comfort.</p>
+                
+                <div class="about-list">
+                    <div class="about-list-item"><span>✦</span> Precision Measurements</div>
+                    <div class="about-list-item"><span>✦</span> Hand-Finished Stitching</div>
+                    <div class="about-list-item"><span>✦</span> Curated Fabric Selection</div>
+                    <div class="about-list-item"><span>✦</span> Multiple Fitting Sessions</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-cream">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 2.5rem;">
+                <span class="section-subtitle">Custom Tailoring Offerings</span>
+                <h2 class="section-title">Comprehensive Tailoring Services</h2>
+                <p style="color: #666; font-size: 0.95rem;">From structured bespoke suits to traditional garments and intricate alterations, every piece is tailored specifically for you.</p>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Services</button>
+                <button class="filter-btn" data-filter="men">Men</button>
+                <button class="filter-btn" data-filter="women">Women</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+                <button class="filter-btn" data-filter="wedding">Wedding</button>
+                <button class="filter-btn" data-filter="alterations">Alterations</button>
+                <button class="filter-btn" data-filter="custom">Custom</button>
+            </div>
+
+            <div class="services-grid" id="servicesGrid">
+                
+                <div class="service-card" data-category="men custom" data-id="1" data-title="Men's Suit Tailoring" data-img="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" data-desc="Impeccably tailored 2-piece and 3-piece custom suits designed for business, formal galas, and special occasions." data-occasions="Business, Galas, Formals" data-includes="Chest canvas fitting, personalized lining, lapel styling">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Man wearing a custom fitted two-piece formal suit" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Men's Suit Tailoring</h3>
+                            <p class="service-desc">Impeccably tailored 2-piece and 3-piece custom suits designed for business and formal galas.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="women custom" data-id="2" data-title="Women's Dress Tailoring" data-img="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" data-desc="Elegantly stitched formal dresses, evening gowns, and tailored blazers crafted around your exact body silhouette." data-occasions="Evening Wear, Dinners, Formal Gatherings" data-includes="Pattern Drafting, Sleeve Adjustments, Trial Fitting">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80" alt="Woman wearing an elegant custom-tailored dress" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Women's Dress Tailoring</h3>
+                            <p class="service-desc">Elegantly stitched formal dresses, evening gowns, and tailored blazers crafted around your silhouette.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="traditional men women" data-id="3" data-title="Shalwar Kameez" data-img="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80" data-desc="Traditional shalwar kameez crafted with crisp collars, structured cuffs, and flawless fabric drape." data-occasions="Eid, Festive Gatherings, Daily Formalwear" data-includes="Custom Collar Design, Pocket Placement, Choice of Cuffs">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80" alt="Premium traditional shalwar kameez attire" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Shalwar Kameez</h3>
+                            <p class="service-desc">Traditional shalwar kameez crafted with crisp collars, structured cuffs, and flawless fabric drape.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="traditional men" data-id="4" data-title="Kurta Stitching" data-img="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" data-desc="Modern and classic tailored kurtas using breathable linens, cottons, and silks for clean elegance." data-occasions="Religious Ceremonies, Casual Formal, Cultural Events" data-includes="Ban Collar, Thread Detailing, Custom Placket">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Elegant tailored kurta with modern placket detailing" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Kurta Stitching</h3>
+                            <p class="service-desc">Modern and classic tailored kurtas using breathable linens, cottons, and silks for clean elegance.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="men traditional wedding" data-id="5" data-title="Waistcoat Tailoring" data-img="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=800&q=80" data-desc="Sophisticated waistcoats featuring structured padding, custom metal buttons, and refined necklines." data-occasions="Weddings, Receptions, Festive Parties" data-includes="Pocket Styling, Inner Satin Lining, Button Customization">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=800&q=80" alt="Sophisticated tailored waistcoat for formal occasions" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Waistcoat Tailoring</h3>
+                            <p class="service-desc">Sophisticated waistcoats featuring structured padding, custom buttons, and refined necklines.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="wedding men women" data-id="6" data-title="Wedding Wear" data-img="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" data-desc="Bespoke groom tuxedos, wedding waistcoats, and regal formal attire customized for your big day." data-occasions="Weddings, Receptions, Barat, Engagement" data-includes="Full Bespoke Construction, Premium Fabrics, Multi-Fittings">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Groom wearing custom tailored wedding formalwear" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Wedding Wear</h3>
+                            <p class="service-desc">Bespoke groom tuxedos, wedding waistcoats, and regal formal attire customized for your big day.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="men women" data-id="7" data-title="Formal Wear" data-img="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" data-desc="Precision cut blazers, formal trousers, and corporate attire tailored for modern confidence." data-occasions="Executive Meetings, Conferences, Gala Dinners" data-includes="Shoulder Alignment, Waist Tapering, Premium Hemming">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Professionally tailored formal executive attire" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Formal Wear</h3>
+                            <p class="service-desc">Precision cut blazers, formal trousers, and corporate attire tailored for modern confidence.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="men women alterations" data-id="8" data-title="Trouser Stitching" data-img="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" data-desc="Custom-fitted dress trousers, chinos, and formal slacks with precise leg tapering and waistband fitting." data-occasions="Daily Work, Casual Business, Dinners" data-includes="Waist Adjustments, Inseam Hemming, Cuff Details">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" alt="Tailor measuring and marking trouser inseam length" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Trouser Stitching</h3>
+                            <p class="service-desc">Custom-fitted dress trousers and formal slacks with precise leg tapering and waistband fitting.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+                <div class="service-card" data-category="custom women men" data-id="9" data-title="Custom Design" data-img="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" data-desc="Turn your design sketches or inspiration photos into custom handmade garments built from scratch." data-occasions="Unique Events, Themed Parties, Personal Style" data-includes="Design Consultation, Sketching, Custom Pattern Making">
+                    <div class="service-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Designer sketching custom garment designs" class="service-img" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <div>
+                            <h3 class="service-title">Custom Design</h3>
+                            <p class="service-desc">Turn your design sketches or inspiration photos into custom handmade garments built from scratch.</p>
+                        </div>
+                        <span class="service-link">View Details →</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="men" class="section-padding">
+        <div class="container editorial-grid">
+            <div class="editorial-content">
+                <span class="section-subtitle">Men's Collection</span>
+                <h2 class="section-title">Sharp Fits. Personal Style.</h2>
+                <p>Whether you require a commandingly sharp business suit, a crisp cotton shirt, or a finely crafted traditional waistcoat, our men's bespoke tailoring delivers distinction in every seam.</p>
+                <p>We craft tailored suits, formal trousers, casual jackets, and ethnic garments that harmonize structural integrity with natural mobility.</p>
+                <a href="#appointment" class="btn btn-outline">Book Fitting for Men</a>
+            </div>
+            <div class="editorial-images">
+                <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=600&q=80" alt="Man in sharp fitted business suit" class="editorial-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=600&q=80" alt="Tailored men's formal shirt and trousers" class="editorial-img offset" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="women" class="section-padding bg-cream">
+        <div class="container editorial-grid reverse">
+            <div class="editorial-content">
+                <span class="section-subtitle">Women's Collection</span>
+                <h2 class="section-title">Designed Around You.</h2>
+                <p>Our women's tailoring atelier creates gracefully contoured garments engineered around individual proportions. From executive suits to ethereal evening dresses, we transform fine fabrics into fluid, beautifully structured attire.</p>
+                <p>Experience custom fittings where darting, neckline cuts, and hemlines are meticulously adjusted to complement your style.</p>
+                <a href="#appointment" class="btn btn-outline">Book Fitting for Women</a>
+            </div>
+            <div class="editorial-images">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Woman wearing elegant custom tailored outfit" class="editorial-img" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Tailored women's fashion dress silhouette" class="editorial-img offset" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="traditional" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+                <span class="section-subtitle">Heritage & Heritage Style</span>
+                <h2 class="section-title">Traditional Attire</h2>
+                <p style="color: #666;">Crafting traditional suits, kurtas, and waistcoats with timeless craftsmanship and modern stitching refinement.</p>
+            </div>
+            <div class="editorial-grid">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Traditional tailored kurta and waistcoat ensemble" style="width:100%; height:450px; border-radius:4px;" loading="lazy">
+                <div>
+                    <h3 class="font-serif" style="font-size: 2rem; margin-bottom: 1rem;">Refined Traditional Elegance</h3>
+                    <p style="color: #555; margin-bottom: 1.5rem;">Traditional garments rely on subtle structural balance. Our tailoring ensures shoulders sit flat, collars remain structured without stiffness, and side slits lie flush.</p>
+                    <ul style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:2rem; font-size:0.9rem;">
+                        <li><strong>✓ Premium Collar Interlining:</strong> Retains crisp shape wash after wash.</li>
+                        <li><strong>✓ Custom Sleeve Lengths:</strong> Fitted precisely to your arm length.</li>
+                        <li><strong>✓ Reinforced Seams:</strong> Double-stitched for longevity and movement.</li>
+                    </ul>
+                    <a href="https://wa.me/923093269261" target="_blank" class="btn btn-whatsapp">Order Traditional via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="wedding" class="section-padding bg-dark">
+        <div class="container editorial-grid">
+            <div>
+                <span class="section-subtitle">Special Occasions</span>
+                <h2 class="section-title">Wedding & Grand Formals</h2>
+                <p style="margin-bottom: 1.5rem; opacity: 0.85;">Your wedding day demands exceptional sartorial elegance. Our master tailors craft groom tuxedos, formal waistcoats, and wedding occasion garments with obsessive care.</p>
+                <p style="margin-bottom: 2rem; opacity: 0.85;">Every wedding piece undergoes three precise fitting stages to ensure total ease of movement and picture-perfect appearance from every angle.</p>
+                <a href="#appointment" class="btn btn-primary">Schedule Wedding Fitting</a>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Groom in a tailored formal tuxedo suit" style="width: 100%; height: 500px; border-radius: 4px; box-shadow: var(--shadow-elevated);" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="alterations" class="section-padding">
+        <div class="container editorial-grid reverse">
+            <div>
+                <span class="section-subtitle">Garment Transformation</span>
+                <h2 class="section-title">Already Have the Outfit? Perfect the Fit.</h2>
+                <p style="color: #555; margin-bottom: 1.5rem;">An off-the-rack garment rarely fits flawlessly. Our precision alteration services reshape existing clothing to complement your natural contours.</p>
+                <div class="about-list" style="margin-top:0; margin-bottom:2rem;">
+                    <div class="about-list-item"><span>✂</span> Jacket Waist Tapering</div>
+                    <div class="about-list-item"><span>✂</span> Trouser Hemming & Tapering</div>
+                    <div class="about-list-item"><span>✂</span> Sleeve Length Adjustments</div>
+                    <div class="about-list-item"><span>✂</span> Dress Restyling & Fitting</div>
+                </div>
+                <a href="https://wa.me/923093269261" target="_blank" class="btn btn-outline">Request Alteration Advice</a>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" alt="Tailor making precise adjustments and alterations to garment" style="width: 100%; height: 450px; border-radius: 4px;" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="custom" class="section-padding bg-cream">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto;">
+                <span class="section-subtitle">Bespoke Process</span>
+                <h2 class="section-title">How We Craft Your Bespoke Garment</h2>
+                <p style="color: #666;">Our structured 6-step tailoring journey guarantees an exceptional fitting experience.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">01</div>
+                    <div class="process-title">Discuss</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">02</div>
+                    <div class="process-title">Measure</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">03</div>
+                    <div class="process-title">Select Fabric</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">04</div>
+                    <div class="process-title">Design</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">05</div>
+                    <div class="process-title">Stitch & Fit</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">06</div>
+                    <div class="process-title">Finalize</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fabric" class="section-padding">
+        <div class="container editorial-grid">
+            <div>
+                <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80" alt="Close-up texture of high quality suiting fabric and textiles" style="width: 100%; height: 480px; border-radius: 4px;" loading="lazy">
+            </div>
+            <div>
+                <span class="section-subtitle">Textile Excellence</span>
+                <h2 class="section-title">Curated Fabric Collection</h2>
+                <p style="color: #555; margin-bottom: 1.5rem;">Great garments begin with exceptional fabrics. We source fine wools, breathable Egyptian cottons, structured linens, and luxury silks designed for breathability, longevity, and elegant drape.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+                    <div>
+                        <h4 class="font-serif" style="font-size: 1.2rem; color: var(--color-muted-gold);">Wool & Suiting</h4>
+                        <p style="font-size: 0.85rem; color: #666;">Breathable year-round wool blends for structured suits.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif" style="font-size: 1.2rem; color: var(--color-muted-gold);">Egyptian Cotton</h4>
+                        <p style="font-size: 0.85rem; color: #666;">Ultra-smooth cotton for crisp formal shirts and kurtas.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif" style="font-size: 1.2rem; color: var(--color-muted-gold);">Pure Linen</h4>
+                        <p style="font-size: 0.85rem; color: #666;">Lightweight natural linen perfect for warm weather wear.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-serif" style="font-size: 1.2rem; color: var(--color-muted-gold);">Raw Silk & Velvet</h4>
+                        <p style="font-size: 0.85rem; color: #666;">Rich textures crafted specifically for ceremonial waistcoats.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-cream">
+        <div class="container measurement-guide-grid">
+            <div>
+                <span class="section-subtitle">Precision Profile</span>
+                <h2 class="section-title">Interactive Measurement Guide</h2>
+                <p style="color: #555; margin-bottom: 1.5rem;">We record individual anatomical measurements to construct a personal body profile pattern.</p>
+                
+                <div class="measurement-list">
+                    <div class="measurement-card">
+                        <h4>1. Shoulder Width</h4>
+                        <p>Measured across the natural curve of the back shoulders.</p>
+                    </div>
+                    <div class="measurement-card">
+                        <h4>2. Chest / Bust</h4>
+                        <p>Taken around the fullest part of the torso with ease.</p>
+                    </div>
+                    <div class="measurement-card">
+                        <h4>3. Natural Waist</h4>
+                        <p>Measured at the narrowest waistline position.</p>
+                    </div>
+                    <div class="measurement-card">
+                        <h4>4. Sleeve Length</h4>
+                        <p>From shoulder point down past the wrist bone.</p>
+                    </div>
+                    <div class="measurement-card">
+                        <h4>5. Trouser Inseam</h4>
+                        <p>From inner crotch down to the exact shoe break.</p>
+                    </div>
+                    <div class="measurement-card">
+                        <h4>6. Neck / Collar</h4>
+                        <p>Measured around the base of neck for proper collar comfort.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" alt="Master tailor taking accurate body measurements with measuring tape" style="width: 100%; height: 500px; border-radius: 4px; box-shadow: var(--shadow-subtle);" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+                <span class="section-subtitle">The Fit Difference</span>
+                <h2 class="section-title">Standard Fit vs. Tailored Precision</h2>
+                <p style="color: #666;">Drag the slider to visually compare standard off-the-rack sizing against custom fitted tailoring.</p>
+            </div>
+
+            <div class="ba-container" id="baContainer">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Standard loose unadjusted suit fit" class="ba-img">
+                <div class="ba-label ba-label-before">Standard Sizing</div>
+                
+                <div class="ba-img-after" id="baAfter">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1200&q=80" alt="Bespoke perfectly fitted suit contour">
+                    <div class="ba-label ba-label-after">Bespoke Fit</div>
+                </div>
+
+                <div class="ba-slider-handle" id="baHandle">
+                    <div class="ba-handle-button">↔</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-cream">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 2.5rem;">
+                <span class="section-subtitle">Sartorial Guidance</span>
+                <h2 class="section-title">Occasion Style Guide</h2>
+            </div>
+
+            <div class="tabs-nav">
+                <div class="tab-btn active" data-tab="tab-business">Business</div>
+                <div class="tab-btn" data-tab="tab-wedding">Wedding</div>
+                <div class="tab-btn" data-tab="tab-formal">Formal</div>
+                <div class="tab-btn" data-tab="tab-traditional">Traditional</div>
+            </div>
+
+            <div id="tab-business" class="tab-content active">
+                <div>
+                    <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Executive Business Attire</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Structured two-piece suits in navy, charcoal, or mid-grey. Recommended with crisp medium-spread collar cotton shirts and clean hemmed trousers.</p>
+                    <p style="font-size: 0.85rem; color: var(--color-muted-gold); font-weight: 600;">Recommended Fabric: Super 120s Lightweight Wool</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Executive corporate suit styling" style="width: 100%; height: 350px; border-radius: 4px;" loading="lazy">
+            </div>
+
+            <div id="tab-wedding" class="tab-content">
+                <div>
+                    <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Groom & Wedding Elegance</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Three-piece tuxedos or richly textured waistcoats paired with traditional sherwanis or formal suits.</p>
+                    <p style="font-size: 0.85rem; color: var(--color-muted-gold); font-weight: 600;">Recommended Fabric: Silk Blend or Superfine Wool</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Groom wedding formal styling" style="width: 100%; height: 350px; border-radius: 4px;" loading="lazy">
+            </div>
+
+            <div id="tab-formal" class="tab-content">
+                <div>
+                    <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Black Tie & Gala Events</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Classic black or midnight blue tuxedo with satin peak lapels, silk bow tie, and crisp white bib shirt.</p>
+                    <p style="font-size: 0.85rem; color: var(--color-muted-gold); font-weight: 600;">Recommended Fabric: Black Barathea Wool with Satin Facing</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=800&q=80" alt="Black tie formal tuxedo styling" style="width: 100%; height: 350px; border-radius: 4px;" loading="lazy">
+            </div>
+
+            <div id="tab-traditional" class="tab-content">
+                <div>
+                    <h3 class="font-serif" style="font-size: 1.8rem; margin-bottom: 1rem;">Festive Traditional Style</h3>
+                    <p style="color: #555; margin-bottom: 1rem;">Custom-fitted shalwar kameez accented with a textured dark brown or burgundy waistcoat and structured collar.</p>
+                    <p style="font-size: 0.85rem; color: var(--color-muted-gold); font-weight: 600;">Recommended Fabric: Raw Cotton or Jamawar Silk Blend</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80" alt="Festive traditional attire styling" style="width: 100%; height: 350px; border-radius: 4px;" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="appointment" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+                <span class="section-subtitle">Tailoring Estimate & Booking</span>
+                <h2 class="section-title">Schedule Your Fitting</h2>
+                <p style="color: #666;">Fill in your details to receive an instant estimate and send your request directly via WhatsApp.</p>
+            </div>
+
+            <div class="estimator-card">
+                <form id="appointmentForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" id="formName" class="form-control" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" id="formPhone" class="form-control" required placeholder="03093269261">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tailoring Category *</label>
+                            <select id="formCategory" class="form-control" required>
+                                <option value="Suit">Men's Full Suit</option>
+                                <option value="Shalwar Kameez">Shalwar Kameez</option>
+                                <option value="Kurta">Kurta</option>
+                                <option value="Waistcoat">Waistcoat</option>
+                                <option value="Dress">Women's Custom Dress</option>
+                                <option value="Alterations">Garment Alterations</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Date</label>
+                            <input type="date" id="formDate" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Fabric Option</label>
+                            <select id="formFabric" class="form-control">
+                                <option value="Standard" data-add="0">Customer Provided Fabric</option>
+                                <option value="House Cotton" data-add="2000">House Cotton Fabric (+PKR 2,000)</option>
+                                <option value="Premium Wool" data-add="6000">Premium Suiting Wool (+PKR 6,000)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Service Speed</label>
+                            <select id="formSpeed" class="form-control">
+                                <option value="Standard" data-add="0">Standard Delivery (7-10 Days)</option>
+                                <option value="Express" data-add="2500">Express Delivery (3-4 Days) (+PKR 2,500)</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label class="form-label">Additional Instructions / Requirements</label>
+                            <textarea id="formNotes" class="form-control" rows="3" placeholder="Specify neck style, pocket preferences, or specific alterations needed..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="estimate-total-box">
+                        <div>
+                            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #666;">Estimated Cost</span>
+                            <div class="estimate-amount" id="estimateAmount">PKR 8,500</div>
+                        </div>
+                        <button type="submit" class="btn btn-whatsapp">Send via WhatsApp</button>
+                    </div>
+                    <p class="estimate-disclaimer">* Estimated price only. Final quotation depends on fabric, complex design requirements, and personal embellishments.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding bg-cream">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+                <span class="section-subtitle">Visual Portfolio</span>
+                <h2 class="section-title">Atelier Gallery</h2>
+                <p style="color: #666;">Explore snapshots of our tailor studio, fabric cuts, and finished bespoke outfits.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80" alt="Tailor measuring fabric" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Tailored suit detail" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Craftsman sewing garment" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" alt="Traditional ethnic apparel" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80" alt="Women bespoke fashion" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80" alt="Fine fabric textures" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Tailored kurta placket" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+                <div class="gallery-item" data-src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=1200&q=80">
+                    <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=600&q=80" alt="Bespoke waistcoat stitching" loading="lazy">
+                    <div class="gallery-overlay">🔍</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
+        <span class="lightbox-next" id="lightboxNext">&#10095;</span>
+        <img src="" alt="Gallery Preview" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+                <span class="section-subtitle">Garment Preservation</span>
+                <h2 class="section-title">Caring for Your Tailored Clothing</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <div style="background: var(--color-warm-cream); padding: 2rem; border-top: 3px solid var(--color-muted-gold);">
+                    <h4 class="font-serif" style="font-size: 1.3rem; margin-bottom: 0.75rem;">Suit & Coat Storage</h4>
+                    <p style="font-size: 0.88rem; color: #555;">Always hang tailored suits on wide contoured wooden hangers to preserve shoulder structure. Allow wool garments to rest 24 hours between wears.</p>
+                </div>
+                <div style="background: var(--color-warm-cream); padding: 2rem; border-top: 3px solid var(--color-muted-gold);">
+                    <h4 class="font-serif" style="font-size: 1.3rem; margin-bottom: 0.75rem;">Cleaning & Steam</h4>
+                    <p style="font-size: 0.88rem; color: #555;">Dry clean tailored garments sparingly. Use light hand steaming to clear wrinkles and refresh natural textile fibers without harsh chemicals.</p>
+                </div>
+                <div style="background: var(--color-warm-cream); padding: 2rem; border-top: 3px solid var(--color-muted-gold);">
+                    <h4 class="font-serif" style="font-size: 1.3rem; margin-bottom: 0.75rem;">Traditional Care</h4>
+                    <p style="font-size: 0.88rem; color: #555;">Iron traditional kurtas and shalwars inside out on medium heat. Avoid heavy pressure directly over custom embroidery or delicate buttons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-cream text-center">
+        <div class="container" style="max-width: 700px;">
+            <span class="section-subtitle">Client Experience</span>
+            <h2 class="section-title">Share Your Fitting Experience</h2>
+            <p style="color: #666; margin-bottom: 2rem;">Have you recently received a tailored suit or garment from STITCH? We value your thoughts on fit, fabric feel, and craftsmanship.</p>
+            <a href="https://wa.me/923093269261" target="_blank" class="btn btn-outline">Send Us Your Feedback</a>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">
+                <span class="section-subtitle">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I book an appointment?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can book an appointment directly through our online request form above or send us a WhatsApp message at 03093269261 to arrange a personal consultation session.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What measurements are required?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For bespoke garments, we prefer taking 15+ detailed body measurements in person at our studio. If ordering remotely, you can provide measurements following our online guide.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I bring my own fabric?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely. You are welcome to bring your own unstitched fabric, or choose from our curated house collection of premium wools, cottons, and silks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer alterations?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we perform alterations on suits, trousers, dresses, and ethnic garments to ensure your existing wardrobe fits perfectly.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does tailoring usually take?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard custom tailoring takes between 7 to 10 days including a fitting session. Express tailoring options are available upon request for time-sensitive occasions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-cream">
+        <div class="container text-center" style="max-width: 800px;">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Visit or Contact Our Atelier</h2>
+            <p style="color: #666; margin-bottom: 2.5rem;">Have questions regarding custom tailoring, fabric availability, or specialized fittings? Reach out to our team.</p>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.5rem;">
+                <div style="background:#FFF; padding: 1.5rem; border: 1px solid var(--color-border);">
+                    <div style="font-size: 1.2rem; color: var(--color-muted-gold); margin-bottom: 0.5rem;">📞 Phone</div>
+                    <a href="tel:03093269261" style="font-weight: 600;">03093269261</a>
+                </div>
+                <div style="background:#FFF; padding: 1.5rem; border: 1px solid var(--color-border);">
+                    <div style="font-size: 1.2rem; color: #25D366; margin-bottom: 0.5rem;">💬 WhatsApp</div>
+                    <a href="https://wa.me/923093269261" target="_blank" style="font-weight: 600;">03093269261</a>
+                </div>
+                <div style="background:#FFF; padding: 1.5rem; border: 1px solid var(--color-border);">
+                    <div style="font-size: 1.2rem; color: var(--color-muted-gold); margin-bottom: 0.5rem;">✉ Email</div>
+                    <a href="mailto:info@theperfectstitch.com" style="font-weight: 600; font-size: 0.85rem;">info@theperfectstitch.com</a>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="tel:03093269261" class="btn btn-outline">Call Now</a>
+                <a href="https://wa.me/923093269261" target="_blank" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="mailto:info@theperfectstitch.com" class="btn btn-primary">Email Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-dark text-center" style="position: relative; background-image: linear-gradient(rgba(13,13,13,0.85), rgba(13,13,13,0.85)), url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+        <div class="container" style="max-width: 800px;">
+            <span class="section-subtitle">Begin Your Journey</span>
+            <h2 class="section-title" style="color: #FFF; font-size: clamp(2.5rem, 5vw, 3.8rem);">Your Perfect Fit Starts Here.</h2>
+            <p style="margin-bottom: 2.5rem; color: #DDD; font-size: 1.1rem;">Bring your vision, choose your style, and let every detail be tailored impeccably around you.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#appointment" class="btn btn-primary">Book an Appointment</a>
+                <a href="https://wa.me/923093269261" target="_blank" class="btn btn-whatsapp">WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">STITCH</div>
+                    <p class="footer-desc">Premium custom tailoring crafted around your fit, style and occasion. Tailored with precision, designed for you.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">About Us</a>
+                        <a href="#services" class="footer-link">Services</a>
+                        <a href="#men" class="footer-link">Men's Tailoring</a>
+                        <a href="#women" class="footer-link">Women's Tailoring</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Collections</h4>
+                    <div class="footer-links">
+                        <a href="#traditional" class="footer-link">Traditional Wear</a>
+                        <a href="#wedding" class="footer-link">Wedding Suits</a>
+                        <a href="#alterations" class="footer-link">Alterations</a>
+                        <a href="#fabric" class="footer-link">Fabrics</a>
+                        <a href="#gallery" class="footer-link">Gallery</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact Atelier</h4>
+                    <div class="footer-links">
+                        <span class="footer-link">Phone: 03093269261</span>
+                        <a href="https://wa.me/923093269261" target="_blank" class="footer-link">WhatsApp: 03093269261</a>
+                        <a href="mailto:info@theperfectstitch.com" class="footer-link">Email: info@theperfectstitch.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 STITCH. All Rights Reserved. Bespoke Tailoring & Apparel.
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-card">
+            <span class="modal-close" id="modalCloseBtn">&times;</span>
+            <img src="" alt="Service detail image" class="modal-img" id="modalImg">
+            <div class="modal-body">
+                <h3 class="modal-title font-serif" id="modalTitle">Service Title</h3>
+                <p class="modal-desc" id="modalDesc">Detailed description of service...</p>
+                <div class="modal-details">
+                    <p style="font-size: 0.85rem; margin-bottom: 0.5rem;"><strong>Suitable Occasions:</strong> <span id="modalOccasions">-</span></p>
+                    <p style="font-size: 0.85rem;"><strong>Included Features:</strong> <span id="modalIncludes">-</span></p>
+                </div>
+                <div class="modal-actions">
+                    <a href="#appointment" class="btn btn-primary" id="modalBookBtn">Request Appointment</a>
+                    <a href="https://wa.me/923093269261" target="_blank" class="btn btn-whatsapp">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">↑</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /* 1. Mobile Drawer Toggle */
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+            const drawerOverlay = document.getElementById('drawerOverlay');
+            const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+
+            function openDrawer() {
+                mobileDrawer.classList.add('active');
+                drawerOverlay.classList.add('active');
+            }
+
+            function closeDrawer() {
+                mobileDrawer.classList.remove('active');
+                drawerOverlay.classList.remove('active');
+            }
+
+            if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
+            if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+            if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', closeDrawer);
+            });
+
+            /* 2. Search Modal Toggle */
+            const searchOpenBtn = document.getElementById('searchOpenBtn');
+            const searchModal = document.getElementById('searchModal');
+            const closeSearchBtn = document.getElementById('closeSearchBtn');
+
+            if (searchOpenBtn) {
+                searchOpenBtn.addEventListener('click', () => {
+                    searchModal.classList.add('active');
+                    document.getElementById('searchInput').focus();
+                });
+            }
+
+            if (closeSearchBtn) {
+                closeSearchBtn.addEventListener('click', () => {
+                    searchModal.classList.remove('active');
+                });
+            }
+
+            /* 3. Service Filtering */
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const serviceCards = document.querySelectorAll('.service-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    serviceCards.forEach(card => {
+                        const cardCategories = card.getAttribute('data-category');
+                        if (filterValue === 'all' || cardCategories.includes(filterValue)) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            /* 4. Service Quick View Modal */
+            const serviceModal = document.getElementById('serviceModal');
+            const modalCloseBtn = document.getElementById('modalCloseBtn');
+            const modalImg = document.getElementById('modalImg');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalOccasions = document.getElementById('modalOccasions');
+            const modalIncludes = document.getElementById('modalIncludes');
+            const modalBookBtn = document.getElementById('modalBookBtn');
+
+            serviceCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    modalImg.src = card.getAttribute('data-img');
+                    modalTitle.textContent = card.getAttribute('data-title');
+                    modalDesc.textContent = card.getAttribute('data-desc');
+                    modalOccasions.textContent = card.getAttribute('data-occasions') || 'Various Formal Events';
+                    modalIncludes.textContent = card.getAttribute('data-includes') || 'Custom fitting & pattern design';
+                    serviceModal.classList.add('active');
+                });
+            });
+
+            function closeModal() {
+                if (serviceModal) serviceModal.classList.remove('active');
+            }
+
+            if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+            if (modalBookBtn) modalBookBtn.addEventListener('click', closeModal);
+
+            if (serviceModal) {
+                serviceModal.addEventListener('click', (e) => {
+                    if (e.target === serviceModal) closeModal();
+                });
+            }
+
+            /* 5. Style Guide Tabs */
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetTab = btn.getAttribute('data-tab');
+
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+
+                    btn.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+
+            /* 6. Dynamic Price Estimator */
+            const formCategory = document.getElementById('formCategory');
+            const formFabric = document.getElementById('formFabric');
+            const formSpeed = document.getElementById('formSpeed');
+            const estimateAmount = document.getElementById('estimateAmount');
+
+            const basePrices = {
+                'Suit': 15000,
+                'Shalwar Kameez': 4500,
+                'Kurta': 3500,
+                'Waistcoat': 5500,
+                'Dress': 8000,
+                'Alterations': 1500
+            };
+
+            function updateEstimate() {
+                if (!formCategory || !estimateAmount) return;
+                const cat = formCategory.value;
+                let base = basePrices[cat] || 5000;
+
+                const fabricAdd = parseInt(formFabric.options[formFabric.selectedIndex].getAttribute('data-add') || '0');
+                const speedAdd = parseInt(formSpeed.options[formSpeed.selectedIndex].getAttribute('data-add') || '0');
+
+                const total = base + fabricAdd + speedAdd;
+                estimateAmount.textContent = `PKR ${total.toLocaleString()}`;
+            }
+
+            if (formCategory) formCategory.addEventListener('change', updateEstimate);
+            if (formFabric) formFabric.addEventListener('change', updateEstimate);
+            if (formSpeed) formSpeed.addEventListener('change', updateEstimate);
+
+            /* 7. Appointment Form WhatsApp Generation */
+            const appointmentForm = document.getElementById('appointmentForm');
+
+            if (appointmentForm) {
+                appointmentForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const name = document.getElementById('formName').value;
+                    const phone = document.getElementById('formPhone').value;
+                    const category = formCategory.value;
+                    const date = document.getElementById('formDate').value || 'Flexible';
+                    const fabric = formFabric.value;
+                    const speed = formSpeed.value;
+                    const notes = document.getElementById('formNotes').value || 'None';
+                    const cost = estimateAmount.textContent;
+
+                    const message = `Hello STITCH,%0A%0AI would like to request a tailoring appointment:%0A` +
+                        `• Name: ${encodeURIComponent(name)}%0A` +
+                        `• Phone: ${encodeURIComponent(phone)}%0A` +
+                        `• Category: ${encodeURIComponent(category)}%0A` +
+                        `• Preferred Date: ${encodeURIComponent(date)}%0A` +
+                        `• Fabric Option: ${encodeURIComponent(fabric)}%0A` +
+                        `• Delivery Speed: ${encodeURIComponent(speed)}%0A` +
+                        `• Estimated Total: ${encodeURIComponent(cost)}%0A` +
+                        `• Notes: ${encodeURIComponent(notes)}`;
+
+                    window.open(`https://wa.me/923093269261?text=${message}`, '_blank');
+                });
+            }
+
+            /* 8. Before / After Fitting Comparison Slider */
+            const baContainer = document.getElementById('baContainer');
+            const baAfter = document.getElementById('baAfter');
+            const baHandle = document.getElementById('baHandle');
+            let isDragging = false;
+
+            if (baContainer && baAfter && baHandle) {
+                function setSliderPosition(x) {
+                    const rect = baContainer.getBoundingClientRect();
+                    let offsetX = x - rect.left;
+                    if (offsetX < 0) offsetX = 0;
+                    if (offsetX > rect.width) offsetX = rect.width;
+
+                    const percentage = (offsetX / rect.width) * 100;
+                    baAfter.style.width = `${percentage}%`;
+                    baHandle.style.left = `${percentage}%`;
+                }
+
+                baHandle.addEventListener('mousedown', () => isDragging = true);
+                window.addEventListener('mouseup', () => isDragging = false);
+                window.addEventListener('mousemove', (e) => {
+                    if (isDragging) setSliderPosition(e.clientX);
+                });
+
+                // Touch events for mobile
+                baHandle.addEventListener('touchstart', () => isDragging = true);
+                window.addEventListener('touchend', () => isDragging = false);
+                window.addEventListener('touchmove', (e) => {
+                    if (isDragging && e.touches[0]) setSliderPosition(e.touches[0].clientX);
+                });
+            }
+
+            /* 9. Lightbox Gallery */
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxPrev = document.getElementById('lightboxPrev');
+            const lightboxNext = document.getElementById('lightboxNext');
+
+            let currentGalleryIdx = 0;
+            const gallerySrcs = Array.from(galleryItems).map(item => item.getAttribute('data-src'));
+
+            function showLightbox(idx) {
+                currentGalleryIdx = idx;
+                lightboxImg.src = gallerySrcs[currentGalleryIdx];
+                lightbox.classList.add('active');
+            }
+
+            galleryItems.forEach((item, idx) => {
+                item.addEventListener('click', () => showLightbox(idx));
+            });
+
+            if (lightboxClose) {
+                lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+            }
+
+            if (lightboxPrev) {
+                lightboxPrev.addEventListener('click', () => {
+                    currentGalleryIdx = (currentGalleryIdx - 1 + gallerySrcs.length) % gallerySrcs.length;
+                    lightboxImg.src = gallerySrcs[currentGalleryIdx];
+                });
+            }
+
+            if (lightboxNext) {
+                lightboxNext.addEventListener('click', () => {
+                    currentGalleryIdx = (currentGalleryIdx + 1) % gallerySrcs.length;
+                    lightboxImg.src = gallerySrcs[currentGalleryIdx];
+                });
+            }
+
+            /* 10. FAQ Accordion */
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const item = q.parentElement;
+                    const answer = item.querySelector('.faq-answer');
+
+                    const isActive = item.classList.contains('active');
+
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+
+            /* 11. Escape Key Handler for All Modals */
+            window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (serviceModal) serviceModal.classList.remove('active');
+                    if (searchModal) searchModal.classList.remove('active');
+                    if (lightbox) lightbox.classList.remove('active');
+                    closeDrawer();
+                }
+            });
+
+            /* 12. Back To Top Button */
+            const backToTopBtn = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+            });
+
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
